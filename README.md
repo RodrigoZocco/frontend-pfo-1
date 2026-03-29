@@ -18,7 +18,7 @@ Este proyecto de la materia Desarrollo de Sistemas Web (Front End) de la comisiÃ
 - [x] Proyecto publicado utilizando GitHub Pages.
 - [x] En el `README.md` se indica la URL de GitHub Pages.
 
-> **URL de GitHub Pages:** _(ToDo: ME FALTA PUBLICARLO Y ACTUALIZARLO ACA)_
+> **URL de GitHub Pages:** _(https://rodrigozocco.github.io/frontend-pfo-1/)_
 
 ---
 
