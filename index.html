@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!-- 
+    * Metaetiquetas obligatorias: charset y viewport 
+    * Título descriptivo del sitio
+    * Vínculo al archivo CSS externo
+    * Vínculo a Google Fonts
+    -->
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Mi Portafolio Personal</title>
+
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- 
+         HEADER: Encabezado principal del sitio. Contiene logo y nombre.
+         Mejora futura: agregar un toggle de modo oscuro/claro.
+    -->
+    <header id="inicio">
+      <div class="header-inner">
+        <div class="logo">
+          <span class="logo-bracket">&lt;</span>
+          <span class="logo-text">Dev</span>
+          <span class="logo-bracket">/&gt;</span>
+        </div>
+        <p class="header-tagline">Desarrollador · CABA</p>
+      </div>
+    </header>
+
+    <!--
+         NAV: Barra de navegación con cinco enlaces (se pidio al menos 3)
+         Mejora futura: convertirla en sticky con scroll suave animado.
+    -->
+    <nav id="nav-principal">
+      <ul class="nav-list">
+        <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
+        <li><a href="#tarjetas" class="nav-link">Proyectos</a></li>
+        <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
+        <li><a href="#contacto" class="nav-link">Contacto</a></li>
+        <li><a href="#peliculas" class="nav-link">Películas</a></li>
+      </ul>
+    </nav>
+
+    <!--
+         MAIN: Contenido principal dividido en secciones obligatorias.
+    -->
+    <main>
+      <!-- SECCIÓN 1 — Presentación Personal -->
+      <section id="sobre-mi">
+        <div class="section-label">01 / Sobre mí</div>
+        <div class="sobre-mi-grid">
+          <div class="sobre-mi-texto">
+            <h2 class="section-title">
+              Hola, soy<br /><em>Rodrigo Adrian.</em>
+            </h2>
+            <p class="bio">
+              Soy desarrollador de software en formación, apasionado por
+              construir interfaces accesibles, rápidas y visualmente potentes.
+              Mi misión es transformar ideas en experiencias digitales que
+              combinen funcionalidad y buen diseño. Creo en el código limpio, la
+              creatividad constante y el aprendizaje como motor de crecimiento.
+            </p>
+            <a href="#contacto" class="btn-primary">Escribime</a>
+          </div>
+          <div class="sobre-mi-imagen">
+            <img
+              src="img/cara.jpg"
+              alt="cara de rodrigo, desarrollador de software"
+              class="perfil-img"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN 2 — Tarjetas de Proyectos organizadas con Flexbox -->
+      <!-- Mejora futura: conectar esta sección a una API de GitHub para
+           mostrar repos reales en forma dinámica. -->
+      <section id="tarjetas">
+        <div class="section-label">02 / Proyectos</div>
+        <h2 class="section-title">Trabajos recientes</h2>
+        <div class="tarjetas-grid">
+          <article class="tarjeta">
+            <div class="tarjeta-img-wrap">
+              <img
+                src="img/ecommerce.jpg"
+                alt="Proyecto E-commerce: pantalla de código HTML y CSS"
+                class="tarjeta-img"
+              />
+            </div>
+            <div class="tarjeta-body">
+              <span class="tarjeta-tag">HTML · CSS</span>
+              <h3 class="tarjeta-titulo">E-commerce Moderno</h3>
+              <p class="tarjeta-desc">
+                Tienda online estática con catálogo de productos, carrito visual
+                y diseño adaptable a dispositivos móviles.
+              </p>
+            </div>
+          </article>
+
+          <article class="tarjeta">
+            <div class="tarjeta-img-wrap">
+              <img
+                src="img/boceto-landing-agencia.jpg"
+                alt="Proyecto Landing Page: diseño limpio en pantalla"
+                class="tarjeta-img"
+              />
+            </div>
+            <div class="tarjeta-body">
+              <span class="tarjeta-tag">HTML · CSS · JS</span>
+              <h3 class="tarjeta-titulo">Landing Page Agencia</h3>
+              <p class="tarjeta-desc">
+                Página para una agencia creativa con animaciones CSS, sección de
+                testimonios y formulario de contacto.
+              </p>
+            </div>
+          </article>
+
+          <article class="tarjeta">
+            <div class="tarjeta-img-wrap">
+              <img
+                src="img/blog-personal.jpg"
+                alt="Proyecto Blog Personal: líneas de código en monitor"
+                class="tarjeta-img"
+              />
+            </div>
+            <div class="tarjeta-body">
+              <span class="tarjeta-tag">HTML · CSS</span>
+              <h3 class="tarjeta-titulo">Blog Personal</h3>
+              <p class="tarjeta-desc">
+                Blog responsivo con tipografía editorial, sistema de categorías
+                y modo lectura optimizado para comodidad visual.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- SECCIÓN 3 — Listado de Habilidades con tabla -->
+      <!-- Mejora futura: agregar barras de progreso animadas con porcentaje
+           de dominio para cada tecnología. -->
+      <section id="habilidades">
+        <div class="section-label">03 / Habilidades</div>
+        <h2 class="section-title">¿Qué se usar?</h2>
+
+        <div class="habilidades-wrapper">
+          <div class="habilidades-columna">
+            <h3 class="habilidades-subtitulo">Tecnologías que domino</h3>
+            <table class="tabla-habilidades">
+              <thead>
+                <tr>
+                  <th>Tecnología</th>
+                  <th>Nivel</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>HTML5</td>
+                  <td><span class="badge badge-verde">Avanzado</span></td>
+                </tr>
+                <tr>
+                  <td>CSS3 / Flexbox / Grid</td>
+                  <td><span class="badge badge-verde">Avanzado</span></td>
+                </tr>
+                <tr>
+                  <td>JavaScript (ES6+)</td>
+                  <td><span class="badge badge-amarillo">Intermedio</span></td>
+                </tr>
+                <tr>
+                  <td>Git &amp; GitHub</td>
+                  <td><span class="badge badge-amarillo">Intermedio</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="habilidades-columna">
+            <h3 class="habilidades-subtitulo">Quiero aprender</h3>
+            <ul class="lista-aprender">
+              <li>React.js</li>
+              <li>Node.js &amp; Express</li>
+              <li>TypeScript</li>
+              <li>Bases de datos SQL</li>
+              <li>Diseño UX/UI</li>
+            </ul>
+          </div>
+
+          <div class="habilidades-columna">
+            <h3 class="habilidades-subtitulo">Hobbies</h3>
+            <ul class="lista-hobbies">
+              <li>🏀 Jugar al Basket</li>
+              <li>🎵 Escuchar podcasts</li>
+              <li>📚 Aprender sobre tecnología</li>
+              <li>🎮 Jugar online</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN 4 — Formulario de Contacto -->
+      <section id="contacto">
+        <div class="section-label">04 / Contacto</div>
+        <h2 class="section-title">¿Precisas algo?</h2>
+        <p class="contacto-intro">
+          Completá el formulario y te respondo cuando lo vea.
+        </p>
+
+        <form class="formulario" action="#" method="post" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nombre">Nombre</label>
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                placeholder="Tu nombre"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="apellido">Apellido</label>
+              <input
+                type="text"
+                id="apellido"
+                name="apellido"
+                placeholder="Tu apellido"
+                required
+              />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="ejemplo@correo.com"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="telefono">Teléfono</label>
+              <input
+                type="tel"
+                id="telefono"
+                name="telefono"
+                placeholder="+54 11 1234-5678"
+              />
+            </div>
+          </div>
+          <button type="submit" class="btn-primary btn-submit">
+            Enviar mensaje →
+          </button>
+        </form>
+      </section>
+
+      <!-- SECCIÓN 5 — Películas Favoritas -->
+      <!-- Mejora futura: consumir una API para mostrar datos
+           actualizados como ratings, año y trailer en un modal. -->
+      <section id="peliculas">
+        <div class="section-label">05 / Películas favoritas</div>
+        <h2 class="section-title">Las 3 mejores de la historia</h2>
+        <p class="peliculas-intro">
+          Mi selección personal: peliculas de cine que me gustarón.
+        </p>
+
+        <div class="peliculas-lista">
+          <div class="pelicula-card">
+            <div class="pelicula-numero">02</div>
+            <div class="pelicula-img-wrap">
+              <img
+                src="img/peaky-blinders.jpg"
+                alt="Los hermanos Shelby de Peaky Blinders"
+                class="pelicula-img"
+              />
+            </div>
+            <div class="pelicula-info">
+              <h3 class="pelicula-titulo">Peaky Blinders (película)</h3>
+              <p class="pelicula-anio">Steven Knight · 2025</p>
+              <p class="pelicula-desc">
+                La historia continúa tras el final de la serie. Tommy Shelby
+                vuelve a enfrentarse a nuevos enemigos en un contexto aún más
+                oscuro. Drama, poder y decisiones que lo cambian todo. Si viste
+                la serie, es obligatoria.
+              </p>
+            </div>
+          </div>
+
+          <div class="pelicula-card">
+            <div class="pelicula-numero">01</div>
+            <div class="pelicula-img-wrap">
+              <img
+                src="img/batman.jpg"
+                alt="Fotograma de The Dark Knight: imagen de sala de cine"
+                class="pelicula-img"
+              />
+            </div>
+            <div class="pelicula-info">
+              <h3 class="pelicula-titulo">Batman: el caballero de la noche</h3>
+              <p class="pelicula-anio">Christopher Nolan · 2008</p>
+              <p class="pelicula-desc">
+                Una obra maestra del cine de superhéroes. El Joker de Heath
+                Ledger redefine lo que un villano puede ser. Accion, caos y
+                orden. tenes que mirarla.
+              </p>
+            </div>
+          </div>
+
+          <div class="pelicula-card">
+            <div class="pelicula-numero">03</div>
+            <div class="pelicula-img-wrap">
+              <img
+                src="img/interstellar.jpg"
+                alt="Fotograma de Interstellar: imagen de sala oscura de cine"
+                class="pelicula-img"
+              />
+            </div>
+            <div class="pelicula-info">
+              <h3 class="pelicula-titulo">Interstellar</h3>
+              <p class="pelicula-anio">Christopher Nolan · 2014</p>
+              <p class="pelicula-desc">
+                Ciencia ficción. La relación entre Cooper y Murph es emoción
+                pura. La banda sonora de Hans Zimmer tambien colabora con la
+                experiencia.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--
+         FOOTER: Pie de página con redes sociales e información adicional.
+         Mejora futura: agregar un mapa con ubicación aproximada.
+   -->
+    <footer id="footer">
+      <div class="footer-inner">
+        <div class="footer-logo">
+          <span class="logo-bracket">&lt;</span>
+          <span class="logo-text">Dev</span>
+          <span class="logo-bracket">/&gt;</span>
+        </div>
+        <p class="footer-copy">
+          &copy; 2026 Rodrigo Adrian · Hecho con HTML, CSS y las consignas de la
+          PFO 1
+        </p>
+        <div class="footer-redes">
+          <a
+            href="https://github.com"
+            target="_blank"
+            rel="noopener"
+            class="red-social"
+            aria-label="GitHub"
+            >GitHub</a
+          >
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener"
+            class="red-social"
+            aria-label="LinkedIn"
+            >LinkedIn</a
+          >
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener"
+            class="red-social"
+            aria-label="Twitter / X"
+            >Twitter / X</a
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
